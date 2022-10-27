@@ -3,10 +3,7 @@
 let personasRegistradas = parseInt(prompt("¿Cuantas personas registradas existen en tu Ecommerce?"))
 let acumularEdades = 0
 
-if (personasRegistradas = " ") {
-    alert("No ingresaste ningun número, vuelve a intentarlo recargando la página.")
-}
-else if (personasRegistradas < 0){
+if (personasRegistradas < 0){
     alert("Es imposible que el número de personas registradas sea negativo, recargue la página y vuelva a ingresar un número positivo")
 } 
 else if (personasRegistradas === 0) {
