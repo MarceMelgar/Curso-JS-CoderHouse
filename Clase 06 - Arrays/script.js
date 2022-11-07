@@ -71,7 +71,7 @@ const abecedarioNuevo = []
 console.log(abecedario)
 
 for (let i = 0; i < abecedario.length; i++) {
-    if (i%3 !== 0) {
+    if (i%3 !== 0 || i === 0) {
         abecedarioNuevo.push(abecedario[i]);
     }
 }
