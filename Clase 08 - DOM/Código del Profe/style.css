@@ -1,0 +1,22 @@
+.caja {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.producto {
+  background-color: burlywood;
+}
+
+.productoSinStock {
+  background-color: lightcoral;
+}
+
+.nombreProducto {
+  color: red;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}

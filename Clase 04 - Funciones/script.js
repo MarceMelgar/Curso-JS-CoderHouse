@@ -52,14 +52,16 @@ console.log(resultado) */
 // 05 - Escribir una función que calcule el área de un círculo y otra que calcule el volumen de un cilindro usando la primera función.
 
 
-/* function areaCirculo (pi,radio) {
-   console.log(`El área del círculo, cuyo radio es ${radio} es: ${(pi*Math.pow(radio,2))}`);
+/* function areaCirculo (radio) {
+    return Math.pow(Math.PI * radio, 2)
 }
 
-const pi = Math.PI
-let radio = parseFloat(prompt("Ingresar el radio"));
+function volumenCilindro(radio, altura) {
+    return areaCirculo(radio * altura)
+}
 
-function areaCirculo() */
+console.log("El area del circulo es: ", areaCirculo(5))
+console.log("El volúmen del cilindro es: ", volumenCilindro(8,15))
 
 // 06 - Escribir una función que reciba una muestra de números en una lista y devuelva su media.
 
