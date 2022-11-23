@@ -32,7 +32,7 @@ a {
     text-decoration: none;
 }
 
-.wrapper {
+.wp {
     display: grid;
     grid-template-columns: .7fr 5fr;
     background-color: var(--clr-main);
