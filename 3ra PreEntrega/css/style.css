@@ -169,6 +169,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    box-shadow: 0 0 5px;
 }
 
 .producto-titulo {
@@ -214,7 +215,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--clr-main-light);
+    background-color: var(--clr-main);
     color: var(--clr-black);
     padding: .5rem;
     padding-right: 1.5rem;
@@ -223,6 +224,7 @@ main {
 
 .carrito-producto-imagen {
     width: 4rem;
+    box-shadow: 0.5px 0.5px 3px;
 }
 
 .carrito-producto small {

@@ -1,4 +1,4 @@
-// Array de Productos
+// Array de Objetos - Productos
 
 const productos = [
 
@@ -12,7 +12,7 @@ const productos = [
             nombre: "Materiales Eléctricos",
             id: "materialesEléctricos"
         },
-        precio: 1000
+        precio: 140
     },
     {
         id: "ME02",
@@ -22,17 +22,17 @@ const productos = [
             nombre: "Materiales Eléctricos",
             id: "materialesEléctricos"
         },
-        precio: 1000
+        precio: 560
     },
     {
         id: "ME03",
-        titulo: "Cable Unifilar 2x10mm",
+        titulo: "Cable Unifilar 2x10mm (rollo)",
         imagen: "./img/Materiales_Eléctricos/03.jpg",
         categoria: {
             nombre: "Materiales Eléctricos",
             id: "materialesEléctricos"
         },
-        precio: 1000
+        precio: 1090
     },
     {
         id: "ME04",
@@ -42,154 +42,101 @@ const productos = [
             nombre: "Materiales Eléctricos",
             id: "materialesEléctricos"
         },
-        precio: 1000
+        precio: 378
     },
     {
         id: "ME05",
-        titulo: "PreEnsamblado 2x6mm",
+        titulo: "PreEnsamblado 2x6mm (rollo)",
         imagen: "./img/Materiales_Eléctricos/05.jpg",
         categoria: {
             nombre: "Materiales Eléctricos",
             id: "materialesEléctricos"
         },
-        precio: 1000
+        precio: 2600
     },
 
     // Iluminación
     
     {
         id: "IL01",
-        titulo: "Camiseta 01",
+        titulo: "Spot 2 luces redondo",
         imagen: "./img/Iluminación/01.jpg",
         categoria: {
             nombre: "Iluminación",
             id: "iluminación"
         },
-        precio: 1000
+        precio: 210
     },
     {
         id: "IL02",
-        titulo: "Camiseta 02",
+        titulo: "Spot 1 luz para riel",
         imagen: "./img/Iluminación/02.jpg",
         categoria: {
             nombre: "Iluminación",
             id: "iluminación"
         },
-        precio: 1000
+        precio: 135
     },
     {
         id: "IL03",
-        titulo: "Camiseta 03",
+        titulo: "Spot 1 luz de vidrio",
         imagen: "./img/Iluminación/03.jpg",
         categoria: {
             nombre: "Iluminación",
             id: "iluminación"
         },
-        precio: 1000
+        precio: 330
     },
     {
         id: "IL04",
-        titulo: "Camiseta 04",
+        titulo: "Spot 1 luz dorado",
         imagen: "./img/Iluminación/04.jpg",
         categoria: {
             nombre: "Iluminación",
             id: "iluminación"
         },
-        precio: 1000
+        precio: 169
     },
     {
         id: "IL05",
-        titulo: "Camiseta 05",
+        titulo: "Aplique de 2 luces",
         imagen: "./img/Iluminación/05.jpg",
         categoria: {
             nombre: "Iluminación",
             id: "iluminación"
         },
-        precio: 1000
+        precio: 430
     },
     {
         id: "IL06",
-        titulo: "Camiseta 06",
+        titulo: "Aplique de 3 luces",
         imagen: "./img/Iluminación/06.jpg",
         categoria: {
             nombre: "Iluminación",
             id: "iluminación"
         },
-        precio: 1000
+        precio: 570
     },
     {
         id: "IL07",
-        titulo: "Camiseta 07",
+        titulo: "Aplique 4 luces",
         imagen: "./img/Iluminación/07.jpg",
         categoria: {
             nombre: "Iluminación",
             id: "iluminación"
         },
-        precio: 1000
+        precio: 669
     },
     {
         id: "IL08",
-        titulo: "Camiseta 08",
+        titulo: "Colgante de techo",
         imagen: "./img/Iluminación/08.jpg",
         categoria: {
             nombre: "Iluminación",
             id: "iluminación"
         },
-        precio: 1000
+        precio: 1300
     },
-    
-    /* // Herramientas
-    
-    {
-        id: "HE01",
-        titulo: "Pantalón 01",
-        imagen: "./img/Herramientas/01.jpg",
-        categoria: {
-            nombre: "Herramientas",
-            id: "herramientas"
-        },
-        precio: 1000
-    },
-    {
-        id: "HE02",
-        titulo: "Pantalón 02",
-        imagen: "./img/Herramientas/02.jpg",
-        categoria: {
-            nombre: "Herramientas",
-            id: "herramientas"
-        },
-        precio: 1000
-    },
-    {
-        id: "HE03",
-        titulo: "Pantalón 03",
-        imagen: "./img/Herramientas/03.jpg",
-        categoria: {
-            nombre: "Herramientas",
-            id: "herramientas"
-        },
-        precio: 1000
-    },
-    {
-        id: "HE04",
-        titulo: "herramientas",
-        imagen: "./img/Herramientas/04.jpg",
-        categoria: {
-            nombre: "Herramientas",
-            id: "herramientas"
-        },
-        precio: 1000
-    },
-    {
-        id: "HE05",
-        titulo: "Pantalón 05",
-        imagen: "./img/Herramientas/05.jpg",
-        categoria: {
-            nombre: "Herramientas",
-            id: "herramientas"
-        },
-        precio: 1000
-    } */
 ];
 
 
