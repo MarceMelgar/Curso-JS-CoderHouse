@@ -7,25 +7,25 @@ const URL_PRODUCTOS = "./js/productos.json";
 
 
 // Fetch de los productos
+
 const pedirProductos = async () => {
     const resp = await fetch(URL_PRODUCTOS);
     let productos = await resp.json();
     return productos;
 };
+
 let productos = pedirProductos();
-productos
-.then((productos) => productosFetched(productos))
+
+productos.then((productos) => productosFetched(productos))
 
 function productosFetched(productos) {
     imprimirProductos(DomElements.listadoProductos, productos);
 
-    // Evento del buscador del header
-    DomElements.buscadorTop.addEventListener("submit", function() {
+    DomElements.buscadorTop.addEventListener("submit", function() {          // Evento del buscador del header
         buscar(event, productos);
     }, false);
 
-    // Evento de las categorías laterales
-    DomElements.botonesCategorias.forEach((botonCategoria) => {
+    DomElements.botonesCategorias.forEach((botonCategoria) => {             // Evento de las categorías laterales
         botonCategoria.addEventListener("click", function() {
             categoriaClick(event, productos);
         }, false);

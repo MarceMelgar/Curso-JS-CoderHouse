@@ -4,5 +4,6 @@ export const toastify = (status) => {
         duration: 2000,
         close: true,
         className: "toastifyToast"
-    }).showToast();
+    })
+    .showToast();
 }
