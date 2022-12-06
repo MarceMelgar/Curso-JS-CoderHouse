@@ -1,0 +1,110 @@
+import * as Botones from "./botones.js";
+import * as ElementosDom from "./elementosDom.js";
+
+// Precios con los decimales separados por coma, en lugar de por punto
+
+export function toLocaleFixed (num) {
+
+    return num.toLocaleString(undefined, {
+
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 2
+
+    });
+};
+
+// Renderizado de los productos en la home
+
+export function imprimirProductos(listadoProductos, productos) {
+
+    listadoProductos.innerHTML = "";
+    for (const producto of productos) {
+
+        let contenedorProducto = document.createElement("div");
+        contenedorProducto.className = "producto";
+        contenedorProducto.id = producto.sku;
+        contenedorProducto.innerHTML = `
+        
+        <div class="producto__img">
+            <img src="${producto.imagen}" alt="${producto.titulo}">
+        </div>
+        <h4 class="producto__titulo">${producto.titulo.toUpperCase()}</h4>
+        <h4 class="producto__precio">$<span>${toLocaleFixed(producto.precio)}</span></h4>
+        <div class="producto__agregar">AGREGAR AL CARRITO</div>
+        <div class="producto__sinStock">SIN STOCK</div>
+        `;
+
+        listadoProductos.appendChild(contenedorProducto);
+    }
+
+    Botones.asignarBotonesAgregar(productos);
+}
+
+export let carritoAgregados = []; // Declaro el array de los productos que se agregan al carrito
+
+// Imprimo los productos en el carrito
+
+export function imprimirProductosEnCarrito() {
+    carritoProductos.innerHTML = "";
+    carritoAgregados.forEach((productoAgregado) => {
+        let nuevoProducto = document.createElement("div");
+        nuevoProducto.className = "nuevoProducto";
+        nuevoProducto.id = "agregado" + productoAgregado.sku;
+        nuevoProducto.innerHTML = `
+            <div class="carritoImagen">
+            <img src="${productoAgregado.imagen}" alt="${productoAgregado.titulo}">
+            </div>
+            <div class="carritoTitulo">${productoAgregado.titulo}</div>
+            <div class="carritoCantidad">
+            <div class="menos">-</div>
+            <div class="cant">${productoAgregado.cantidad}</div>
+            <div class="mas">+</div>
+            </div>
+            <div class="carritoPrecio">$${toLocaleFixed(productoAgregado.precio * productoAgregado.cantidad)}</div>
+            <div class="carritoBorrar"><i class="fas fa-trash-alt"></i></div>
+        `;
+        carritoProductos.appendChild(nuevoProducto);
+  });
+
+  Botones.asignarBotonesMasMenos();
+  Botones.asignarBotonesBorrar();
+  actualizarPrecioTotal();
+  actualizarNumerito();
+  Botones.estaVacioCheck(); // Se chequea si el carrito quedó vacío para ocultarlo
+  localStorage.setItem("productos", JSON.stringify(carritoAgregados));
+}
+
+function actualizarPrecioTotal() {          // Realiza la suma todos los precios de los productos en el array multiplicado por sus cantidades
+
+    const precioTotal = carritoAgregados.reduce((suma, producto) => suma + (producto.precio * producto.cantidad), 0); 
+    carritoTotal.textContent = toLocaleFixed(precioTotal);
+    
+    localStorage.setItem("precioTotal", precioTotal);
+}
+
+export let numerito = 0;
+function actualizarNumerito() {                 
+    
+    // Se agregan y quitan clases para generar la animación CSS
+    
+    ElementosDom.numeritoContenedor.classList.remove("seMueve");
+    ElementosDom.numeritoContenedor.offsetWidth;
+    ElementosDom.numeritoContenedor.classList.add("seMueve");
+
+    // Suma todas las cantidades de los productos agregados en el array del carrito
+    
+    numerito = carritoAgregados.reduce((suma, productoAgregado) => suma + parseInt(productoAgregado.cantidad), 0);
+    ElementosDom.numeritoContenedor.textContent = numerito;
+
+    localStorage.setItem("numerito", numerito);
+};
+
+// Obtiene el numero desde el Local Storage
+// Si es mayor a cero, carga el carrito que tenemos guardado en el Local Storage.
+
+numerito = localStorage.getItem("numerito");
+if(numerito > 0) {
+    carritoAgregados = localStorage.getItem("productos");
+    carritoAgregados = JSON.parse(carritoAgregados);
+    imprimirProductosEnCarrito();
+}
