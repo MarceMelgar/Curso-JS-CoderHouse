@@ -25,13 +25,12 @@ export function imprimirProductos(listadoProductos, productos) {
         contenedorProducto.id = producto.sku;
         contenedorProducto.innerHTML = `
         
-        <div class="producto__img">
+        <div class="imgProducto">
             <img src="${producto.imagen}" alt="${producto.titulo}">
         </div>
-        <h4 class="producto__titulo">${producto.titulo.toUpperCase()}</h4>
-        <h4 class="producto__precio">$<span>${toLocaleFixed(producto.precio)}</span></h4>
-        <div class="producto__agregar">AGREGAR AL CARRITO</div>
-        <div class="producto__sinStock">SIN STOCK</div>
+        <h4 class="tituloProducto">${producto.titulo}</h4>
+        <h4 class="precioProducto">$<span>${toLocaleFixed(producto.precio)}</span></h4>
+        <div class="agregarProducto">AGREGAR AL CARRITO</div>
         `;
 
         listadoProductos.appendChild(contenedorProducto);

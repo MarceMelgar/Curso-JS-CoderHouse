@@ -3,112 +3,112 @@
       "sku":1,
       "titulo":"Detector de voltaje",
       "imagen":"img/herramientas/1.jpeg",
-      "precio":910,
-      "categoria":"Herramientas"
+      "categoria":"Herramientas",
+      "precio":910
    },
    {
       "sku":2,
       "titulo":"Pinza pela cables",
       "imagen":"img/herramientas/2.jpeg",
-      "precio":730,
-      "categoria":"Herramientas"
+      "categoria":"Herramientas",
+      "precio":730
    },
    {
       "sku":3,
       "titulo":"Soldador de 60W",
       "imagen":"img/herramientas/3.jpeg",
-      "precio":638,
-      "categoria":"Herramientas"
+      "categoria":"Herramientas",
+      "precio":638
    },
    {
       "sku":4,
-      "titulo":"Taladro percutor 650W",
+      "titulo":"Taladro de 650W",
       "imagen":"img/herramientas/4.jpeg",
-      "precio":2837,
-      "categoria":"Herramientas"
+      "categoria":"Herramientas",
+      "precio":2837
    },
    {
       "sku":5,
       "titulo":"Multimetro digital",
       "imagen":"img/herramientas/5.jpeg",
-      "precio":2817,
-      "categoria":"Herramientas"
+      "categoria":"Herramientas",
+      "precio":2817
    },
    {
       "sku":6,
       "titulo":"Atornillador inalámbrico (20V)",
       "imagen":"img/herramientas/6.jpeg",
-      "precio":6210,
-      "categoria":"Herramientas"
+      "categoria":"Herramientas",
+      "precio":6210
    },
    {
       "sku":7,
       "titulo":"Spot 2 luces negro",
       "imagen":"img/iluminación/1.jpeg",
-      "precio":966,
-      "categoria":"Iluminación"
+      "categoria":"Iluminación",
+      "precio":966
    },
    {
       "sku":8,
       "titulo":"Spot 1 luz vidrio",
       "imagen":"img/iluminación/2.jpeg",
-      "precio":470,
-      "categoria":"Iluminación"
+      "categoria":"Iluminación",
+      "precio":470
    },
    {
       "sku":9,
       "titulo":"Spot 1 luz cromado",
       "imagen":"img/iluminación/3.jpeg",
-      "precio":520,
-      "categoria":"Iluminación"
+      "categoria":"Iluminación",
+      "precio":520
    },
    {
       "sku":10,
       "titulo":"Spot 2 luces niquelado",
       "imagen":"img/iluminación/4.jpeg",
-      "precio":966,
-      "categoria":"Iluminación"
+      "categoria":"Iluminación",
+      "precio":966
    },
    {
       "sku":11,
       "titulo":"Spot 3 luces negro",
       "imagen":"img/iluminación/5.jpeg",
-      "precio":1180,
-      "categoria":"Iluminación"
+      "categoria":"Iluminación",
+      "precio":1180
    },
    {
       "sku":12,
       "titulo":"Llave térmica monofásica",
       "imagen":"img/materialesEléctricos/1.jpeg",
-      "precio":155,
-      "categoria":"Materiales Eléctricos"
+      "categoria":"Materiales Eléctricos",
+      "precio": 155
    },
    {
       "sku":13,
       "titulo":"Llave diferencial",
       "imagen":"img/materialesEléctricos/2.jpeg",
-      "precio":669,
-      "categoria":"Materiales Eléctricos"
+      "categoria":"Materiales Eléctricos",
+      "precio":669
    },
    {
       "sku":14,
-      "titulo":"Cable unifilar 2mm (rollo)",
+      "titulo":"Cable unifilar 2mm",
       "imagen":"img/materialesEléctricos/3.jpeg",
-      "precio":1690,
-      "categoria":"Materiales Eléctricos"
+      "categoria":"Materiales Eléctricos",
+      "precio":1690
    },
    {
       "sku":15,
       "titulo":"Nicho cajón medidor",
       "imagen":"img/materialesEléctricos/4.jpeg",
-      "precio":799,
-      "categoria":"Materiales Eléctricos"
+      "categoria":"Materiales Eléctricos",
+      "precio":799
    },
    {
-      "sku":16,
+      "sku": 16,
       "titulo":"Cable PreEnsamblado 2x6mm",
       "imagen":"img/materialesEléctricos/5.jpeg",
-      "precio":12300,
-      "categoria":"Materiales Eléctricos"
+      "categoria":"Materiales Eléctricos",
+      "precio": 1830
    }
 ]

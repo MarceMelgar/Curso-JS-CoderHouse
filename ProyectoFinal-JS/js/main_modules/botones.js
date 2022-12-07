@@ -9,7 +9,7 @@ import * as ElementosDom from "./elementosDom.js";
 // Reasigna todos los botones de agregar al carrito cada vez que cambian los productos que se muestran
 
 export function asignarBotonesAgregar(productos) {
-    const botonesAgregar = document.querySelectorAll('.producto__agregar');
+    const botonesAgregar = document.querySelectorAll('.agregarProducto');
     botonesAgregar.forEach((botonAgregar) => {
       botonAgregar.addEventListener('click', function() {
           botonAgregarClicked(event, productos);

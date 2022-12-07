@@ -25,7 +25,7 @@ function productosFetcheados(productos) {
         buscar(event, productos);
     }, false);
 
-    ElementosDom.botonesCategorias.forEach((botonCategoria) => {             // Categorías laterales
+    ElementosDom.botonesCategorias.forEach((botonCategoria) => {             // Categorías del main
         botonCategoria.addEventListener("click", function() {
             categoriaClick(event, productos);
         }, false);
