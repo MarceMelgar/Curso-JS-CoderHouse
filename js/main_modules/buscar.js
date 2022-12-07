@@ -3,7 +3,7 @@ import { listadoProductos } from "./elementosDom.js";
 import { asignarBotonVerTodos } from "./botones.js";
 import { botonesCategorias } from "./elementosDom.js";
 
-// Función al enviar el formulario de búsqueda
+// Función tras enviar el formulario de búsqueda
 
 export function buscar(event, productos) {
 
@@ -13,6 +13,7 @@ export function buscar(event, productos) {
     const result = productos.filter(
 
         producto =>
+        
         producto.categoria.toLowerCase().includes(busqueda.toLowerCase()) ||
         producto.titulo.toLowerCase().includes(busqueda.toLowerCase())
 
@@ -34,7 +35,7 @@ export function buscar(event, productos) {
 
     }    
 
-    // Si hay, muestra el mensaje de resultados de la búsqueda
+    // Si hay resultados, muestra el mensaje de resultados de la búsqueda
  
     else {
         let tituloBusqueda = document.createElement("h3");
@@ -47,11 +48,11 @@ export function buscar(event, productos) {
     }
 
     asignarBotonVerTodos(productos);
-    buscadorDeArriba.children[0].value = ""; // Se vacía el input del buscador
+    buscadorDeArriba.children[0].value = ""; // Vacía el input del buscador
 
 }
 
-// Función de hacer click en alguna categoría
+// Función del click en alguna categoría
 
 export function categoriaClick(event, productos) {
 
@@ -67,7 +68,7 @@ export function categoriaClick(event, productos) {
     const result = productos.filter(producto => producto.categoria === event.target.textContent);
     imprimirProductos(listadoProductos, result);
 
-    // Si es la categoría de Todos, solamente imprime nuevamente todos los productos fetcheados
+    // Si es la categoría de todos los productos, imprime nuevamente todos los productos fetch
     
     if(event.target.textContent === "Todos los productos") {
         
@@ -86,7 +87,7 @@ export function categoriaClick(event, productos) {
         `;
         listadoProductos.appendChild(noHayCoincidencias);
     
-        // Si hay resultados, imprime los productos en esa categoría con su título
+        // Si hay resultados, imprime los productos de esa categoría con su respectivo título
     
     } 
     else {

@@ -83,12 +83,6 @@ function actualizarPrecioTotal() {          // Realiza la suma todos los precios
 
 export let numerito = 0;
 function actualizarNumerito() {                 
-    
-    // Se agregan y quitan clases para generar la animación CSS
-    
-    ElementosDom.numeritoContenedor.classList.remove("seMueve");
-    ElementosDom.numeritoContenedor.offsetWidth;
-    ElementosDom.numeritoContenedor.classList.add("seMueve");
 
     // Suma todas las cantidades de los productos agregados en el array del carrito
     

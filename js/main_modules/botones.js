@@ -9,36 +9,42 @@ import * as ElementosDom from "./elementosDom.js";
 // Reasigna todos los botones de agregar al carrito cada vez que cambian los productos que se muestran
 
 export function asignarBotonesAgregar(productos) {
+
     const botonesAgregar = document.querySelectorAll('.agregarProducto');
     botonesAgregar.forEach((botonAgregar) => {
-      botonAgregar.addEventListener('click', function() {
-          botonAgregarClicked(event, productos);
-      }, false);
+
+        botonAgregar.addEventListener('click', function() {
+            botonAgregarClicked(event, productos);
+        }, false);
+
     });
-  };
+
+};
   
 function botonAgregarClicked(event, productos) {
+    
     const productoAgregadoPadre = event.target.closest('.producto');
 
-    // Busca el producto por SKU en el array fetcheado
+    // Busca el producto por SKU en el array fetch
 
     const productoAgregado = productos.find((buscarProducto) => buscarProducto.sku == productoAgregadoPadre.id);
 
-    // Lo busca en el array de productos en el Carrito
+    // Busca en el array de productos en el carrito
 
     const estaEnCarrito = carritoAgregados.find((buscarSiEsta) => buscarSiEsta.sku == productoAgregadoPadre.id);
     if (estaEnCarrito) {
-        estaEnCarrito.cantidad++; // Si está en el Carrito, solo aumenta la cantidad
+        estaEnCarrito.cantidad++; // Si está en el carrito, aumenta solamente la cantidad
+
     } else {
-        Object.assign(productoAgregado, {cantidad: 1}); // Si no está, le setea cantidad
-        carritoAgregados.push(productoAgregado);        // y lo agrega
+        Object.assign(productoAgregado, {cantidad: 1}); // Si no está, le define cantidad y lo agrega
+        carritoAgregados.push(productoAgregado);        
     }
 
     imprimirProductosEnCarrito();
     toastify("agregado");
 }
 
-// Asigna los botones + y - de los productos del Carrito y su evento
+// Asigna los botones + y - de los productos del carrito y su evento
 
 export function asignarBotonesMasMenos() {
 
@@ -62,7 +68,7 @@ function botonMasClicked(event) {
 
     const productoAgregadoPadre = event.target.closest('.nuevoProducto');
 
-    // Busca el producto en el array fetcheado
+    // Busca el producto en el array fetch
 
     const productoAgregado = carritoAgregados.find((buscarProducto) => "agregado" + buscarProducto.sku == productoAgregadoPadre.id);
   
@@ -73,7 +79,7 @@ function botonMasClicked(event) {
 function botonMenosClicked(event) {
     const productoAgregadoPadre = event.target.closest('.nuevoProducto');
 
-    // Busca el producto en el array fetcheado
+    // Busca el producto en el array fetch
     
     const productoAgregado = carritoAgregados.find((buscarProducto) => "agregado" + buscarProducto.sku == productoAgregadoPadre.id);
     
@@ -84,7 +90,7 @@ function botonMenosClicked(event) {
     }
 }
 
-// Reasigna todos los botones de borrar producto en el Carrito
+// Reasigna todos los botones de borrar producto en el carrito
 
 export function asignarBotonesBorrar() {
 
@@ -100,7 +106,7 @@ function botonBorrarClicked(event) {
 
     const productoAgregadoPadre = event.target.closest('.nuevoProducto');
     
-    // Busca el producto en el array fetcheado
+    // Busca el producto en el array fetch
 
     const productoAgregado = carritoAgregados.find((buscarProducto) => "agregado" + buscarProducto.sku == productoAgregadoPadre.id);
 
@@ -114,18 +120,18 @@ function botonBorrarClicked(event) {
     toastify("borrado");
 }
 
-// Evento de vaciar el carrito y disparar el SweetAlert
+// Evento de vaciar el carrito e inicio del SweetAlert
 
 ElementosDom.botonVaciar.addEventListener('click', popUpVaciarCarrito);
 function popUpVaciarCarrito() {
 
-    swal(`Tenés ${numerito} ${numerito > 1 ? "productos" : "producto"} en el carrito.`, {
-        title: "¿Estás seguro?",
+    swal(`Hay ${numerito} ${numerito > 1 ? "productos" : "producto"} en tu carrito actualmente.`, {
+        title: "¿Seguro?",
         icon: "warning",
         buttons: {
         cancel: "Cancelar",
         aceptar: {
-            text: "Aceptar",
+            text: "Sí, segurisimo",
             value: "aceptar",
         },
         },
@@ -135,7 +141,7 @@ function popUpVaciarCarrito() {
         switch (value) {
 
         case "aceptar":
-            numerito > 1 ? swal(`Carrito vaciado. Se eliminaron ${numerito} productos.`,{icon: "success",}) : swal(`Carrito vaciado. Se eliminó ${numerito} producto.`,{icon: "success",});
+            swal (`Vaciaste tu carrito`, {icon: "success",});
             botonVaciarClicked();
             break; 
         }
@@ -144,7 +150,7 @@ function popUpVaciarCarrito() {
 
 function botonVaciarClicked() {
 
-    // Borra todos los productos del array del Carrito
+    // Borra todos los productos del array del carrito
 
     while (carritoAgregados.length) {
         carritoAgregados.pop();
@@ -170,7 +176,7 @@ ElementosDom.cerrarCarrito.addEventListener("click", function(){
 
 });
 
-// Ocultar el div de carrito si está vacío después de cualquier acción
+// Ocultar el carrito si está vacío después de cualquier acción
 
 export function estaVacioCheck() {
 
@@ -188,7 +194,7 @@ export function estaVacioCheck() {
 }
 
 
-// Asigna el botón de Ver todos en las búsquedas y en las categorías
+// Asigna el botón de "ver todos" en las búsquedas y categorías
 
 export function asignarBotonVerTodos(productos) {
     
@@ -200,7 +206,7 @@ export function asignarBotonVerTodos(productos) {
 
 };
 
-// Se imprimen todos los productos del array fetcheado
+// Se imprimen todos los productos del array fetch
 
 function verTodosClicked(productos) {
 

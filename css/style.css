@@ -630,12 +630,24 @@ footer {
   display: none;
 }
 
-.swal-icon--success__line {
-  background-color: #161616;
+.swal-icon {
+  border: 0;
 }
 
-.swal-button swal-button--aceptar {
-  background-color: #161616;
+.swal-icon--warning {
+  background-color: #f34240;
+}
+
+.swal-button--aceptar {
+  background-color:#161616;
+}
+
+.swal-button--aceptar:hover {
+  background-color: #FEC30D;
+}
+
+.swal-icon--warning__body, .swal-icon--warning__dot {
+  background-color: #ffffff;
 }
 
 .swal-footer {
