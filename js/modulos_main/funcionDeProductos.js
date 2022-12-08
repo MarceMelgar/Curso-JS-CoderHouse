@@ -1,14 +1,13 @@
-import * as Botones from "./botones.js";
 import * as ElementosDom from "./elementosDom.js";
+import * as Botones from "./botones.js";
 
-// Precios con los decimales separados por coma, en lugar de por punto
 
 export function toLocaleFixed (num) {
 
     return num.toLocaleString(undefined, {
 
       minimumFractionDigits: 1,
-      maximumFractionDigits: 2
+      maximumFractionDigits: 1
 
     });
 };
@@ -24,7 +23,6 @@ export function imprimirProductos(listadoProductos, productos) {
         contenedorProducto.className = "producto";
         contenedorProducto.id = producto.sku;
         contenedorProducto.innerHTML = `
-        
         <div class="imgProducto">
             <img src="${producto.imagen}" alt="${producto.titulo}">
         </div>
@@ -69,11 +67,11 @@ export function imprimirProductosEnCarrito() {
   Botones.asignarBotonesBorrar();
   actualizarPrecioTotal();
   actualizarNumerito();
-  Botones.estaVacioCheck(); // Se chequea si el carrito quedó vacío para ocultarlo
+  Botones.estaVacioCheck(); // Chequeo de carrito, si quedó vacío se oculta
   localStorage.setItem("productos", JSON.stringify(carritoAgregados));
 }
 
-function actualizarPrecioTotal() {          // Realiza la suma todos los precios de los productos en el array multiplicado por sus cantidades
+function actualizarPrecioTotal() {          // Suma todos los precios de los productos en el array multiplicado por sus cantidades
 
     const precioTotal = carritoAgregados.reduce((suma, producto) => suma + (producto.precio * producto.cantidad), 0); 
     carritoTotal.textContent = toLocaleFixed(precioTotal);

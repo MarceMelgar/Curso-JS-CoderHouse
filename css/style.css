@@ -31,6 +31,10 @@ p {
   background: #f7f7f7;
 }
 
+.cerrado {
+  display: none;
+}
+
 .logo {
   display: flex;
   justify-content: flex-start;
@@ -624,10 +628,6 @@ footer {
   .toastifyToast {
     max-width: none;
   }
-}
-
-.cerrado {
-  display: none;
 }
 
 .swal-icon {

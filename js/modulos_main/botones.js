@@ -6,9 +6,7 @@ import { toastify } from "./toastify.js";
 import * as ElementosDom from "./elementosDom.js";
 
 
-// Reasigna todos los botones de agregar al carrito cada vez que cambian los productos que se muestran
-
-export function asignarBotonesAgregar(productos) {
+export function asignarBotonesAgregar(productos) {          // Aquí se reasigna todos los botones de agregar al carrito cada vez que cambian los productos que se muestran
 
     const botonesAgregar = document.querySelectorAll('.agregarProducto');
     botonesAgregar.forEach((botonAgregar) => {
@@ -44,9 +42,7 @@ function botonAgregarClicked(event, productos) {
     toastify("agregado");
 }
 
-// Asigna los botones + y - de los productos del carrito y su evento
-
-export function asignarBotonesMasMenos() {
+export function asignarBotonesMasMenos() {              // Asigna los botones + y - de los productos del carrito y su evento
 
     const botonesMas = document.querySelectorAll('.mas');
     const botonesMenos = document.querySelectorAll('.menos');
@@ -90,9 +86,7 @@ function botonMenosClicked(event) {
     }
 }
 
-// Reasigna todos los botones de borrar producto en el carrito
-
-export function asignarBotonesBorrar() {
+export function asignarBotonesBorrar() {            // Se reasignan todos los botones de borrar producto en el carrito
 
     const botonesBorrar = document.querySelectorAll('.carritoBorrar i');
 

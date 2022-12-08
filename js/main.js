@@ -1,10 +1,9 @@
-import * as ElementosDom from "./main_modules/elementosDom.js";                   // me traigo todos los elementos exportados del dom
-import { imprimirProductos } from "./main_modules/funcionDeProductos.js";
-import { buscar } from "./main_modules/buscar.js";
-import { categoriaClick } from "./main_modules/buscar.js";
+import * as ElementosDom from "./modulos_main/elementosDom.js";                   // me traigo todos los elementos exportados del dom
+import { imprimirProductos } from "./modulos_main/funcionDeProductos.js";
+import { buscar } from "./modulos_main/buscar.js";
+import { categoriaClick } from "./modulos_main/buscar.js";
 
 const urlDeProductos = "./js/productos.json";
-
 
 // Fetch de los productos
 
